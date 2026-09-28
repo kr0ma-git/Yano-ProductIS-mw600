@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 interface Product {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  stock: number;
+  ID: number;
+  NAME: string;
+  CATEGORY: string;
+  PRICE: number;
+  STOCK: number;
 }
 
 const Home = () => {
@@ -47,14 +47,14 @@ const Home = () => {
 
           <tbody>
             {products.map((product) => (
-              <tr key={product.id} className="border-b bg-white">
-                <td className="border px-4 py-3">{product.id}</td>
-                <td className="border px-4 py-3">{product.name}</td>
-                <td className="border px-4 py-3">{product.category}</td>
+              <tr key={product.ID} className="border-b bg-white">
+                <td className="border px-4 py-3">{product.ID}</td>
+                <td className="border px-4 py-3">{product.NAME}</td>
+                <td className="border px-4 py-3">{product.CATEGORY}</td>
                 <td className="border px-4 py-3">
-                  ₱{product.price.toLocaleString()}
+                  ₱{product.PRICE.toLocaleString()}
                 </td>
-                <td className="border px-4 py-3">{product.stock}</td>
+                <td className="border px-4 py-3">{product.STOCK}</td>
               </tr>
             ))}
           </tbody>
